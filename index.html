@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Jurassic park Password Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="icon" href="https://freepngimg.com/download/jurassic_park/35154-3-jurassic-park-photos.png" </head>
+        <body>
+
+    <div class="heading">
+        <h1>Whte rbt.obj</h1>
+    </div>
+
+    <div class="background">
+        <div class="container">
+
+            <h2>Start Typing To Guess The Password</h2><br>
+            <p>*Password hint: It is a type of dinosaur</p><br>
+            <div>
+                <img id="image" src="./assets/images/irixBoot.gif" width="40%" height="200">
+            </div>
+
+            <div>
+                <h3 id="currentword">_ _ _ _ _</h3>
+            </div>
+            <div id="scoreboard">
+
+                <div class="sidebar">
+                    <h3>GUESSES LEFT:
+                        <span id="guessesremaining"></span>
+                    </h3>
+                </div>
+
+                <div class="sidebar">
+                    <h3>WINS:
+                        <span id="winstracker"></span>
+                    </h3>
+                </div>
+
+                <div class="sidebar">
+                    <h3>LOSSES:
+                        <span id="losstracker"></span>
+                    </h3>
+                </div>
+
+                <div class="sidebar">
+                    <h3>LETTERS YOU GUESSED WRONG:
+                        <span id="playerguesses"></span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Audio-->
+    <!--Hoping to add more sounds soon-->
+    <div>
+
+        <audio id="velociraptor">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="brachiosaurus">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="tyrannosaurus">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="gallimimus">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="dilophosaurus">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="pteranodon">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="carnotaurus">
+            <source src="./assets/audio/victory.mp3" type="audio/mp3">
+
+            <audio id="loser">
+                <source src="./assets/audio/loser.mp3" type="audio/mp3">
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+
+    </body>
+
+</html>

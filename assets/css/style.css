@@ -1,0 +1,86 @@
+body {
+    background-image: url("../images/screen.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    font-size: 35px;
+    color: white;
+    border: solid 5px #b2b2b2;
+    background: #1a3a83f0;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+}
+
+p {
+    color: white;
+}
+
+img {
+    margin: 10px;
+    width: 50%;
+    height: auto;
+}
+
+
+.sidebar {
+    padding: 5px;
+    position: relative;
+    border-top: solid #b2b2b2 2px;
+    border-bottom: solid #b2b2b2 2px;
+    margin-bottom: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+span {
+    border: solid #b2b2b2 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: black;
+    font-size: 15px;
+}
+
+/*
+.background {
+    background-image: url("../images/screen.jpg");
+    border: solid 5px #b2b2b2;
+}
+*/
+
+.container {
+    background-color: #1a3a83f0;
+    margin-top: 51px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    text-align: center;
+    border: solid 3px #b2b2b2;
+}
+
+#currentword {
+    font-size: 30px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    color: white;
+    padding: 20px;
+}
