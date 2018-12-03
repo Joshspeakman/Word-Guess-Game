@@ -34,8 +34,8 @@ function Game() {
 }
 
 // Audio Functions //
-var a = document.getElementById("velociraptor");
-var r = document.getElementById("brachiosaurus");
+var velociraptor = document.getElementById("velociraptor");
+var brachiosaurus = document.getElementById("brachiosaurus");
 var tyrannosaurus = document.getElementById("tyrannosaurus");
 var dilophosaurus = document.getElementById("dilophosaurus");
 var gallimimus = document.getElementById("gallimimus");
@@ -43,84 +43,20 @@ var carnotaurus = document.getElementById("carnotaurus");
 var pteranodon = document.getElementById("pteranodon");
 
 function aud() {
-
-    if (randomWord === words[0]) {
-        dilophosaurus.pause();
-        gallimimus.pause();
-        carnotaurus.pause();
-        pteranodon.pause();
-        tyrannosaurus.pause();
-        r.pause();
-        a.play();
-        document.getElementById("image").src = "./assets/images/velociraptor.gif";
-    }
-
-    else if (randomWord === words[1]) {
-        dilophosaurus.pause();
-        gallimimus.pause();
-        carnotaurus.pause();
-        pteranodon.pause();
-        tyrannosaurus.pause();
-        a.pause();
-        r.play();
-        document.getElementById("image").src = "./assets/images/brachiosaurus.gif";
-    }
-
-    else if (randomWord === words[2]) {
-        dilophosaurus.pause();
-        gallimimus.pause();
-        carnotaurus.pause();
-        pteranodon.pause();
-        r.pause();
-        a.pause();
-        tyrannosaurus.play();
-        document.getElementById("image").src = "./assets/images/tyrannosaurus.gif";
-    }
-
-    else if (randomWord === words[3]) {
-        gallimimus.pause();
-        carnotaurus.pause();
-        pteranodon.pause();
-        tyrannosaurus.pause();
-        r.pause();
-        a.pause();
-        dilophosaurus.play();
-        document.getElementById("image").src = "./assets/images/dilophosaurus.gif";
-    }
-
-    else if (randomWord === words[4]) {
-        carnotaurus.pause();
-        pteranodon.pause();
-        tyrannosaurus.pause();
-        r.pause();
-        a.pause();
-        dilophosaurus.pause();
-        gallimimus.play();
-        document.getElementById("image").src = "./assets/images/gallimimus.gif";
-    }
-
-    else if (randomWord === words[5]) {
-        gallimimus.pause();
-        pteranodon.pause();
-        tyrannosaurus.pause();
-        r.pause();
-        a.pause();
-        dilophosaurus.pause();
-        carnotaurus.play();
-        document.getElementById("image").src = "./assets/images/carnotaurus.gif";
-    }
-
-    else if (randomWord === words[6]) {
-        gallimimus.pause();
-        carnotaurus.pause();
-        tyrannosaurus.pause();
-        r.pause();
-        a.pause();
-        dilophosaurus.pause();
-        pteranodon.play();
-        document.getElementById("image").src = "./assets/images/pteranodon.gif";
-    }
+    pauseAll();
+    document.getElementById("image").src = "./assets/images/" + randomWord + ".gif";
+    window[randomWord].play();
 };
+
+function pauseAll() {
+    gallimimus.pause();
+    carnotaurus.pause();
+    tyrannosaurus.pause();
+    brachiosaurus.pause();
+    velociraptor.pause();
+    dilophosaurus.pause();
+    pteranodon.pause();
+}
 
 // Reset functions //
 function reset() {
