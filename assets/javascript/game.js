@@ -16,7 +16,7 @@ var guessesRemaining = 9;
 // Functions //
 function Game() {
     randomWord = words[Math.floor(Math.random() * words.length)];
- 
+
     lettersOfWord = randomWord.split("");
 
     blanks = lettersOfWord.length;
@@ -26,14 +26,9 @@ function Game() {
     }
 
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
-
-    console.log(randomWord);
-    console.log(lettersOfWord)
-    console.log(blanks)
-    console.log(blanksAndCorrect)
 }
 
-// Audio Functions //
+// Audio //
 var velociraptor = document.getElementById("velociraptor");
 var brachiosaurus = document.getElementById("brachiosaurus");
 var tyrannosaurus = document.getElementById("tyrannosaurus");
@@ -58,7 +53,7 @@ function pauseAll() {
     pteranodon.pause();
 }
 
-// Reset functions //
+// Reset //
 function reset() {
     guessesRemaining = 9;
     wrongGuess = [];
@@ -76,24 +71,20 @@ function checkLetters(letter) {
     }
 
     if (letterInWord) {
-  
+
         for (var i = 0; i < blanks; i++) {
             if (randomWord[i] == letter) {
                 blanksAndCorrect[i] = letter;
             }
         }
-    }
-
-    else {
+    } else {
         wrongGuess.push(letter);
         guessesRemaining--;
     }
-    console.log(blanksAndCorrect);
+
 }
 
-// Final Function //
 function complete() {
-    console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
 
     if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
         wins++;
@@ -107,19 +98,18 @@ function complete() {
         document.getElementById("image").src = "./assets/images/dennis3.gif";
         document.getElementById("losstracker").innerHTML = " " + losses;
         loser.play();
-     
+
     }
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
 
-// Execute Code //
+// Execute //
 Game()
 
 document.onkeyup = function (event) {
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(guesses);
     complete();
-    console.log(guesses);
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
